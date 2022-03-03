@@ -4,22 +4,21 @@ class Playground
 
   def open!
     return if requires_maintenance
-    @status = "open"
+
+    @status = 'open'
     @opened_at = Time.now
     open?
   end
 
   def open?
-    status == "open"
+    status == 'open'
   end
 
   def closed?
-    status == "closed"
+    status == 'closed'
   end
 
-  private
-
   def status
-    @status ||= "closed"
+    @status ||= 'closed'
   end
 end
